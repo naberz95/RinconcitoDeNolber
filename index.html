@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOS ANTOJITOS DE DULCE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarCategoria(categoria) {
+            document.querySelectorAll('.categoria-productos').forEach(div => div.style.display = 'none');
+            document.getElementById(`productos-${categoria}`).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="resources/img/ElrincondeNolberto.png" alt="Logo" height="40"> El Rinconcito De Nolber
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!--
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lista-precios">Lista de Precios</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <h2 class="text-center">Categorías</h2>
+        <div class="row text-center" id="categorias">
+            <div class="col-md-3 d-none">
+                <div class="card p-3" onclick="mostrarCategoria('dulces')">
+                    <img src="resources/img/CategoriaDulces.png" class="card-img-top" alt="Dulces">
+                    <div class="card-body">
+                        <h5 class="card-title">Dulces🍬</h5>
+                        <p class="card-text">Todo tipo de dulcesitos para todos los gustos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3" onclick="mostrarCategoria('papitas')">
+                    <img src="resources/img/CategoriaPapitas.png" class="card-img-top" alt="Papitas">
+                    <div class="card-body">
+                        <h5 class="card-title">Papitas🥔</h5>
+                        <p class="card-text">Crujientes y deliciosas, las mejores marcas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3" onclick="mostrarCategoria('galletas')">
+                    <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.jpg" class="card-img-top" alt="Galletas">
+                    <div class="card-body">
+                        <h5 class="card-title">Galletas🍪 y Postres 🎂</h5>
+                        <p class="card-text">Dulces y postres, para todos los gustos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3" onclick="mostrarCategoria('lista-precios')">
+                    <img src="resources/img/Categoria Lista Precios.png" class="card-img-top" alt="ListaPrecios">
+                    <div class="card-body">
+                        <h5 class="card-title">Lista de Precios</h5>
+                        <p class="card-text">Lista de precios de productos.</p>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </div>
+
+    <!-- Secciones de productos, ocultas por defecto -->
+    <div class="container mt-4">
+        <div id="productos-dulces" class="categoria-productos" style="display: none;">
+            <h3 class="text-center">Dulces Disponibles</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_BonBonBum.jpg" class="card-img-top" alt="BOMBOMBUM">
+                        <div class="card-body">
+                            <h5 class="card-title">Bombombum</h5>
+                            <p class="card-text">Deliciosos caramelos rellenos de chicle.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_Mordisqueta.jpg" class="card-img-top" alt="Mordisqueta">
+                        <div class="card-body">
+                            <h5 class="card-title">Mordisqueta</h5>
+                            <p class="card-text">Deliciosa chupeta Masticable.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_chicleXtime.jpg" class="card-img-top" alt="ChicleXtime">
+                        <div class="card-body">
+                            <h5 class="card-title">Chicles Xtime</h5>
+                            <p class="card-text">Chicle en Pastilla Surtidos.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_chicleSplot.jpg" class="card-img-top" alt="Splot">
+                        <div class="card-body">
+                            <h5 class="card-title">Chicle Bomba</h5>
+                            <p class="card-text">chicle con relleno acido.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2Linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_coffeeDelight.jpg" class="card-img-top" alt="CoffeeDeligth">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffee DELIGTH</h5>
+                            <p class="card-text">Caramelo Masticable de cafe.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_Fruticas.jpg" class="card-img-top" alt="Fruticas">
+                        <div class="card-body">
+                            <h5 class="card-title">Fruticas</h5>
+                            <p class="card-text">Dulce Masticable relleno de sabor</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_FruticaSour.jpg" class="card-img-top" alt="Fruticas Sour">
+                        <div class="card-body">
+                            <h5 class="card-title">Fruticas Sour</h5>
+                            <p class="card-text">Fruticas rellenas acidas.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_maxcombi.jpg" class="card-img-top" alt="Maxcombi">
+                        <div class="card-body">
+                            <h5 class="card-title">Maxcombi</h5>
+                            <p class="card-text">Dulcecitos masticables.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--3 Linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_Nucita.jpg" class="card-img-top" alt="Nucita Masticable">
+                        <div class="card-body">
+                            <h5 class="card-title">Nucita Masticable</h5>
+                            <p class="card-text">Caramelo Relleno de Nucita.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_coffeDelightTradicional.jpg" class="card-img-top" alt="CoffeeDelightDuro">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffe DELIGTH Duro</h5>
+                            <p class="card-text">Dulce sabor a cafe duro.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_miniBum.jpg" class="card-img-top" alt="MiniBum">
+                        <div class="card-body">
+                            <h5 class="card-title">Dulcecito MiniBum</h5>
+                            <p class="card-text">Delicioso caramelo con chicle relleno.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_mentasSnowMint.jpg" class="card-img-top" alt="Menta Snow Mint">
+                        <div class="card-body">
+                            <h5 class="card-title">Menta Snow Mint</h5>
+                            <p class="card-text">Deliciosa Menta masticable.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--4 Linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulces_gomas.png" class="card-img-top" alt="Gomas Trululu">
+                        <div class="card-body">
+                            <h5 class="card-title">Gomitas Variadas</h5>
+                            <p class="card-text">Surtido Variado De Gomitas.</p>
+                            <p class="card-text"><strong>Precio:</strong>desde: hasta  c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_gusanosAcidos.jpg" class="card-img-top" alt="CoffeeDelightDuro">
+                        <div class="card-body">
+                            <h5 class="card-title">Gusanitos Acidos</h5>
+                            <p class="card-text">Dulce sabor a cafe duro.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_masmelosChocomelos.jpg" class="card-img-top" alt="MasmelosChocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">Masmelo Chocomelos</h5>
+                            <p class="card-text">Masmelo recubierto de chocolate.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_MasmeloTradicional.jpg" class="card-img-top" alt="MasmeloTradicional">
+                        <div class="card-body">
+                            <h5 class="card-title">Millows Masmelos</h5>
+                            <p class="card-text">Deliciosa Dulce suave.</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--5Linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_Chocobreack.png" class="card-img-top" alt="Chocobreack">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocobreack</h5>
+                            <p class="card-text">Chocolate con relleno de Caramelo.</p>
+                            <p class="card-text"><strong>Precio:</strong>500$ c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaDulces/Dulce_NucitaCrema.jpg" class="card-img-top" alt="Nucita Crema">
+                        <div class="card-body">
+                            <h5 class="card-title">Nucita Tradicional</h5>
+                            <p class="card-text">Deliciosa mezcla de crema Avellana</p>
+                            <p class="card-text"><strong>Precio:</strong> $500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!--PRODUCTOS DE LA CATEGORIA DE PAPAS-->
+        <div id="productos-papitas" class="categoria-productos" style="display: none;">
+            <h3 class="text-center">Papitas Disponibles</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_MargaritaLimon.png" class="card-img-top" alt="Papas Margarita - Limon">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Margarita Personal- Limon</h5>
+                            <p class="card-text">Deliciosas papas sabor a limón.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_MargaritaPollo.png" class="card-img-top" alt="Papas Margarita - Pollo">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Margarita Personal- Pollo</h5>
+                            <p class="card-text">Deliciosas papas sabor a Pollo.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_MargaritaNatural.png" class="card-img-top" alt="Papas Margarita - Natural">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Margarita Personal- Natural</h5>
+                            <p class="card-text">Deliciosas papas sabor a Natural.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_Detodito.png" class="card-img-top" alt="Papas Detodito">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Personal Detodito</h5>
+                            <p class="card-text">Lo mejor de los productos Margarita.</p>
+                            <p class="card-text"><strong>Precio:</strong> $3.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Otra linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Ripapa.jpg" class="card-img-top" alt="Cheesetris">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Ripapa</h5>
+                            <p class="card-text">Deliciosas papitas de sabores varios</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_Choclitos.png" class="card-img-top" alt="Choclitos">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Choclitos</h5>
+                            <p class="card-text">Deliciosas y aciditos choclitos.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_choclitosPicante.png" class="card-img-top" alt="Choclitos Picante">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Choclitos Picante</h5>
+                            <p class="card-text">Chocitos acidos picanticos</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_Doritos.png" class="card-img-top" alt="Doritos">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Doritos</h5>
+                            <p class="card-text">Delicisos Triangulos sabor a queso.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--2 Linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_Cheesetris.png" class="card-img-top" alt="Cheesetris">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal CheeseTris</h5>
+                            <p class="card-text">Pasabocas sabor a queso.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Golpecontodo.jpg" class="card-img-top" alt="papas_Golpecontodo">
+                        <div class="card-body">
+                            <h5 class="card-title">Golpe Con Todo</h5>
+                            <p class="card-text">Deliciosas mix de yupi.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_CheetosBoliquesos.png" class="card-img-top" alt="Cheetos Boliquesos">
+                        <div class="card-body">
+                            <h5 class="card-title">Personal Boliquesos</h5>
+                            <p class="card-text">Bolitas de maiz sabor a queso.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_CheetosTrissitos.jpg" class="card-img-top" alt="papas_CheetosTrissitos">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheetos Trissitos</h5>
+                            <p class="card-text">bocados de maiz deliosos.</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Otra linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_CheetosMaxi.jpg" class="card-img-top" alt="cheetos maxi">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheestos Maxi</h5>
+                            <p class="card-text">Bocados de maiz maxi</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_yupisHorneado.png" class="card-img-top" alt="Yupis Horneado">
+                        <div class="card-body">
+                            <h5 class="card-title">Yupis Horneados</h5>
+                            <p class="card-text">Pasabocas de maiz</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Gudiz.png" class="card-img-top" alt="Gudiz">
+                        <div class="card-body">
+                            <h5 class="card-title">Gudiz</h5>
+                            <p class="card-text">Bolitas Dulce deliciosas</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_palomitas.jpg" class="card-img-top" alt="palomitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Palomitas de Maiz</h5>
+                            <p class="card-text">Palomitas sabor Caramelo.</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Otra linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Rizadaslimon.jpg" class="card-img-top" alt="Rizadas Limon">
+                        <div class="card-body">
+                            <h5 class="card-title">Rizadas Limon</h5>
+                            <p class="card-text">Papas Rizadas Limon</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Rizadasnatural.png" class="card-img-top" alt="Rizadas Natural">
+                        <div class="card-body">
+                            <h5 class="card-title">Rizadas Natural</h5>
+                            <p class="card-text">Papas Rizadas Natural</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_Rizadaspollo.jpeg" class="card-img-top" alt="Papas Rizadas Pollo">
+                        <div class="card-body">
+                            <h5 class="card-title">Rizadas Pollo</h5>
+                            <p class="card-text">Papas Rizadas Pollo</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_tocineta.png" class="card-img-top" alt="Tocineta">
+                        <div class="card-body">
+                            <h5 class="card-title">Tocineta </h5>
+                            <p class="card-text">Deliciosa Tocineta.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Otra linea-->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_tostienpanada.png" class="card-img-top" alt="Tostiempanadas">
+                        <div class="card-body">
+                            <h5 class="card-title">Tostiempanadas</h5>
+                            <p class="card-text">Empanaditas de limón</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_tostinachos.jpg" class="card-img-top" alt="Tostinacho">
+                        <div class="card-body">
+                            <h5 class="card-title">Tostinacho</h5>
+                            <p class="card-text">Triangulitos sabor queso</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_yupicaseritas.jpg" class="card-img-top" alt="Yupis Caserito">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Caseritas</h5>
+                            <p class="card-text">Papas caseritas naturales</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/Papas_PicadaPersonal.jpg" class="card-img-top" alt="Picada">
+                        <div class="card-body">
+                            <h5 class="card-title">Picada</h5>
+                            <p class="card-text">Picada</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.600 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            <br>
+            <!--Otra linea-->
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_maduritos.jpg" class="card-img-top" alt="Maduritos">
+                        <div class="card-body">
+                            <h5 class="card-title">Maduritos</h5>
+                            <p class="card-text">Maduritos</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.600 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <br>
+            <br>     
+            <br>
+            <br>   
+        </div>
+
+        <!--Galletas-->
+        <div id="productos-galletas" class="categoria-productos" style="display: none;">
+            <h3 class="text-center">Galletas Disponibles</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_CucaNegra.jpg" class="card-img-top" alt="Galletas Festival">
+                        <div class="card-body">
+                            <h5 class="card-title">Galleta cuca Negra</h5>
+                            <p class="card-text">Tradicional Galleta Cuca la gitana Negra.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaGalletas/Galleta_cucablanca.png" class="card-img-top" alt="Galletas de Chocolate">
+                        <div class="card-body">
+                            <h5 class="card-title">Galleta cuca Blanca</h5>
+                            <p class="card-text">Tradicional Galleta Cuca la gitana Blanca.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br> 
+            <!--otra linea-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.jpg" class="card-img-top" alt="chocorramo">
+                        <div class="card-body">
+                            <h5 class="card-title">Tradicional ponque Ramo</h5>
+                            <p class="card-text">Con el mejor sabor tradicional.</p>
+                            <p class="card-text"><strong>Precio:</strong> $3.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_ChocorramoMini.jpg" class="card-img-top" alt="chocorramomini">
+                        <div class="card-body">Tradicional Ponque Mini</h5>
+                            <p class="card-text">Chocorramo miniatura</p>
+                            <p class="card-text"><strong>Precio:</strong> $1.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>     
+            <br>
+            <br>  
+        </div>
+        <div class="container mt-4 categoria-productos" id="productos-lista-precios" style="display: none;">
+            <h2 class="text-center">Lista de Precios</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <ul class="list-group">
+                        <!--
+                        <h3>Dulces 🍬</h3>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Bombombum</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Mordisqueta</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Chicles Xtime</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Chicles Bomba</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Coffe Deligth</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Fruticas</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Fruticas Sour</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Maxcombi</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Nucita Masticable</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Coffee Delight Duro</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Minubum</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Menta Snow Mint</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Gomitas Variadas</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Gusanitos Acidos</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Masmelos chocolate</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Millows Masmelos</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>ChocoBreack</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Nucita Tradicional</strong> - Dulces</span>
+                            <span class="badge bg-primary rounded-pill">$500 c/u</span>
+                        </li>
+                        <br>
+                        -->
+
+                        <h3>Papitas 🥔</h3>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Papitas Margarita Limon</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Papitas Margarita Pollo</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Papitas Margarita Natural</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Papitas Detodito Personal</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$3.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Papitas Ripapa</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>choclitos Limon Personal</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>choclitos Picante Personal</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Doritos</strong> - papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Cheesetris</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Golpe Con Todo</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Cheetos Boliqueso</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>cheetos Trissitos</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>cheetos Maxi</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Yupis Horneados</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Gudiz</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Palomitas</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Rizadas Limon</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Rizadas Natural</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Rizadas Pollo</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>tocineta</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Tosti Empanadas</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Tosti Nachos</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.500 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Yupi Clasicas</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Picada</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.600 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Maduritos</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$1.600 c/u</span>
+                        </li>
+                        <br>
+                        <h3>Galletas 🍪</h3>
+                        <br>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Galletas Cuca Negra</strong> - Galletas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Galletas Cuca Blanca </strong> - Galletas</span>
+                            <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Chocorramo</strong> - Ponque </span>
+                            <span class="badge bg-primary rounded-pill">$3.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Chocorramito</strong> - Ponque </span>
+                            <span class="badge bg-primary rounded-pill">$1.000 c/u</span>
+                        </li>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+
+    <footer>
+        <!-- WhatsApp a la izquierda -->
+        <a href="https://wa.me/qr/GWKC6IY5ATITH1" target="_blank">
+            <img src="resources/img/LogoWhatsapp.png" alt="WhatsApp"> Clic para ir directo a WhatsApp
+        </a>
+    
+        <!-- Botón QR Nequi a la derecha -->
+        <button type="button" class="qr-button" data-bs-toggle="modal" data-bs-target="#modalQR">
+            Ver QR de Nequi
+        </button>
+    </footer>
+    
+    <!-- Modal para el QR de Nequi -->
+    <div class="modal fade" id="modalQR" tabindex="-1" aria-labelledby="modalQRLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalQRLabel">Escanea el QR de Nequi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body text-center">
+              <!-- Alerta de disponibilidad -->
+              <div class="alert alert-warning" role="alert">
+                ⚠️ Antes de pagar, asegúrese de la disponibilidad de los productos.
+              </div>
+      
+              <!-- Imagen del QR -->
+              <img src="/resources/img/CodigoQR.jpg" alt="QR Nequi" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
