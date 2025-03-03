@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOS ANTOJITOS DE DULCE</title>
+    <title>El Rinconcito De Nolber</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -33,7 +33,45 @@
             </div>
         </div>
     </nav>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="resources/img/Proyecto nuevo.png" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/img/Banner1500pesos.png" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/img/Postervariados.png" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/img/PopetasCaramelo.png" class="d-block w-100" alt="Imagen 4">
+            </div>
+            <div class="carousel-item">
+                <img src="resources/img/ProductoNuevo RipapaFamiliar.png" class="d-block w-100" alt="Imagen 5">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
     
+
+<!-- Asegúrate de incluir Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <div class="container mt-4">
         <h2 class="text-center">Categorías</h2>
         <div class="row text-center" id="categorias">
@@ -59,7 +97,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card p-3" onclick="mostrarCategoria('galletas')">
-                    <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.jpg" class="card-img-top" alt="Galletas">
+                    <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.png" class="card-img-top" alt="Galletas">
                     <div class="card-body">
                         <h5 class="card-title">Galletas🍪 y Postres 🎂</h5>
                         <p class="card-text">Dulces y postres, para todos los gustos.</p>
@@ -79,7 +117,8 @@
             </div>                        
         </div>
     </div>
-
+    <br>
+    <br>
     <!-- Secciones de productos, ocultas por defecto -->
     <div class="container mt-4">
         <div id="productos-dulces" class="categoria-productos" style="display: none;">
@@ -384,7 +423,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_Golpecontodo.jpg" class="card-img-top" alt="papas_Golpecontodo">
+                        <img src="resources/img/CategoriaPapitas/papas_Golpecontodo.png" class="card-img-top" alt="papas_Golpecontodo">
                         <div class="card-body">
                             <h5 class="card-title">Golpe Con Todo</h5>
                             <p class="card-text">Deliciosas mix de yupi.</p>
@@ -404,7 +443,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_CheetosTrissitos.jpg" class="card-img-top" alt="papas_CheetosTrissitos">
+                        <img src="resources/img/CategoriaPapitas/papas_CheetosTrissitos.png" class="card-img-top" alt="papas_CheetosTrissitos">
                         <div class="card-body">
                             <h5 class="card-title">Cheetos Trissitos</h5>
                             <p class="card-text">bocados de maiz deliosos.</p>
@@ -418,7 +457,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_CheetosMaxi.jpg" class="card-img-top" alt="cheetos maxi">
+                        <img src="resources/img/CategoriaPapitas/papas_CheetosMaxi.png" class="card-img-top" alt="cheetos maxi">
                         <div class="card-body">
                             <h5 class="card-title">Cheestos Maxi</h5>
                             <p class="card-text">Bocados de maiz maxi</p>
@@ -462,7 +501,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_Rizadaslimon.jpg" class="card-img-top" alt="Rizadas Limon">
+                        <img src="resources/img/CategoriaPapitas/papas_Rizadaslimon.png" class="card-img-top" alt="Rizadas Limon">
                         <div class="card-body">
                             <h5 class="card-title">Rizadas Limon</h5>
                             <p class="card-text">Papas Rizadas Limon</p>
@@ -482,7 +521,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_Rizadaspollo.jpeg" class="card-img-top" alt="Papas Rizadas Pollo">
+                        <img src="resources/img/CategoriaPapitas/papas_Rizadaspollo.png" class="card-img-top" alt="Papas Rizadas Pollo">
                         <div class="card-body">
                             <h5 class="card-title">Rizadas Pollo</h5>
                             <p class="card-text">Papas Rizadas Pollo</p>
@@ -516,7 +555,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_tostinachos.jpg" class="card-img-top" alt="Tostinacho">
+                        <img src="resources/img/CategoriaPapitas/papas_tostinachos.png" class="card-img-top" alt="Tostinacho">
                         <div class="card-body">
                             <h5 class="card-title">Tostinacho</h5>
                             <p class="card-text">Triangulitos sabor queso</p>
@@ -526,7 +565,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
-                        <img src="resources/img/CategoriaPapitas/papas_yupicaseritas.jpg" class="card-img-top" alt="Yupis Caserito">
+                        <img src="resources/img/CategoriaPapitas/papas_yupicaseritas.png" class="card-img-top" alt="Yupis Caserito">
                         <div class="card-body">
                             <h5 class="card-title">Papas Caseritas</h5>
                             <p class="card-text">Papas caseritas naturales</p>
@@ -559,6 +598,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <img src="resources/img/CategoriaPapitas/papas_ripapa125gr.png" class="card-img-top" alt="Ripapa125gr">
+                        <div class="card-body">
+                            <h5 class="card-title">Papas Ripapa 125gr</h5>
+                            <p class="card-text">Papas Tamaño Familiar</p>
+                            <p class="card-text"><strong>Precio:</strong> $7.000 c/u</p>
+                        </div>
+                    </div>
+                </div>
             </div>    
             <br>
             <br>     
@@ -572,7 +621,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <img src="resources/img/CateogoriaGalletas/Galletas_CucaNegra.jpg" class="card-img-top" alt="Galletas Festival">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_CucaNegra.png" class="card-img-top" alt="Galletas Festival">
                         <div class="card-body">
                             <h5 class="card-title">Galleta cuca Negra</h5>
                             <p class="card-text">Tradicional Galleta Cuca la gitana Negra.</p>
@@ -597,7 +646,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.jpg" class="card-img-top" alt="chocorramo">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_Chocorramo.png" class="card-img-top" alt="chocorramo">
                         <div class="card-body">
                             <h5 class="card-title">Tradicional ponque Ramo</h5>
                             <p class="card-text">Con el mejor sabor tradicional.</p>
@@ -607,13 +656,26 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <img src="resources/img/CateogoriaGalletas/Galletas_ChocorramoMini.jpg" class="card-img-top" alt="chocorramomini">
+                        <img src="resources/img/CateogoriaGalletas/Galletas_ChocorramoMini.png" class="card-img-top" alt="chocorramomini">
                         <div class="card-body">Tradicional Ponque Mini</h5>
                             <p class="card-text">Chocorramo miniatura</p>
                             <p class="card-text"><strong>Precio:</strong> $1.000 c/u</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="resources/img/CateogoriaGalletas/Postervariados.png" class="card-img-top" alt="Popetas">
+                        <div class="card-body">
+                            <h5 class="card-title">Popetas Caramelo</h5>
+                            <p class="card-text">Deliciosas Popetas.</p>
+                            <p class="card-text"><strong>Precio:</strong> $2.500 c/u</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <br>
             <br>     
@@ -803,9 +865,17 @@
                             <span><strong>Maduritos</strong> - Papitas</span>
                             <span class="badge bg-primary rounded-pill">$1.600 c/u</span>
                         </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Ripapa 125gr</strong> - Papitas</span>
+                            <span class="badge bg-primary rounded-pill">$7.000 c/u</span>
+                        </li>
                         <br>
                         <h3>Galletas 🍪</h3>
                         <br>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Popetas Caramelo</strong> - Crispetas </span>
+                            <span class="badge bg-primary rounded-pill">$2.500 c/u</span>
+                        </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span><strong>Galletas Cuca Negra</strong> - Galletas</span>
                             <span class="badge bg-primary rounded-pill">$2.000 c/u</span>
@@ -821,6 +891,10 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span><strong>Chocorramito</strong> - Ponque </span>
                             <span class="badge bg-primary rounded-pill">$1.000 c/u</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><strong>Proximamente</strong> - ?? </span>
+                            <span class="badge bg-primary rounded-pill"></span>
                         </li>
                         <br>
                         <br>
